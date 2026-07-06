@@ -1,3 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://PedroManzanares14.github.io/docu_sig/</loc>
+         <lastmod>2026-07-06</lastmod>
+    </url>
+    <url>
+         <loc>https://PedroManzanares14.github.io/docu_sig/declaracion_ia/</loc>
+         <lastmod>2026-07-06</lastmod>
+    </url>
+    <url>
+         <loc>https://PedroManzanares14.github.io/docu_sig/tecnica/</loc>
+         <lastmod>2026-07-06</lastmod>
+    </url>
+    <url>
+         <loc>https://PedroManzanares14.github.io/docu_sig/usuario/</loc>
+         <lastmod>2026-07-06</lastmod>
+    </url>
 </urlset>
