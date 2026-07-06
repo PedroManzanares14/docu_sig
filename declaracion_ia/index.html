@@ -489,10 +489,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-logica-de-geolocalizacion-hu-22" class="md-nav__link">
+  <a href="#1-consulta-y-uso-de-librerias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Lógica de Geolocalización (HU-22)
+        1. Consulta y Uso de Librerías
       
     </span>
   </a>
@@ -500,10 +500,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-trazado-de-rutas-hu-23" class="md-nav__link">
+  <a href="#2-configuracion-y-levantamiento-de-la-ejecucion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Trazado de Rutas (HU-23)
+        2. Configuración y Levantamiento de la Ejecución
       
     </span>
   </a>
@@ -511,10 +511,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-fusion-de-ramas-resolucion-de-divergencias" class="md-nav__link">
+  <a href="#3-identificacion-y-solucion-de-errores-debugging" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Fusión de Ramas (Resolución de divergencias)
+        3. Identificación y Solución de Errores (Debugging)
       
     </span>
   </a>
@@ -563,34 +563,25 @@
 
 
 <h1 id="declaracion-de-uso-de-inteligencia-artificial">Declaración de Uso de Inteligencia Artificial</h1>
-<p>Cumpliendo con los criterios de evaluación y ética académica, documentamos el uso de herramientas de Inteligencia Artificial durante el ciclo de vida de desarrollo de Sportmatch.</p>
+<p>Cumpliendo con los criterios de evaluación y ética académica, documentamos el uso de herramientas de Inteligencia Artificial durante el ciclo de vida de desarrollo del proyecto Sportmatch.</p>
 <h2 id="herramientas-utilizadas">Herramientas Utilizadas</h2>
 <ul>
-<li><strong>Antigravity / Gemini (Google DeepMind):</strong> Actuó como asistente de programación en modalidad <em>Pair-Programming</em> interactiva (IDE agent).</li>
+<li><strong>Antigravity / Gemini (Google DeepMind):</strong> Actuó como asistente técnico virtual para agilizar y resolver cuellos de botella durante el desarrollo.</li>
 </ul>
 <h2 id="areas-de-aplicacion">Áreas de Aplicación</h2>
-<p>La IA fue utilizada principalmente en las etapas de codificación, integración y refactorización para las Historias de Usuario HU-22, HU-23 (Agrupadas internamente como HU-30) y para la resolución de conflictos (Merge):</p>
-<h3 id="1-logica-de-geolocalizacion-hu-22">1. Lógica de Geolocalización (HU-22)</h3>
-<ul>
-<li><strong>Implementación Matemática:</strong> Se utilizó la IA para escribir la función de la fórmula Haversine (<code>distancia.js</code>), garantizando precisión en el cálculo de distancia en kilómetros entre dos coordenadas GPS (usuario y canchas).</li>
-<li><strong>Hooks Personalizados:</strong> Se generó el hook <code>useGeolocalizacion.js</code> con soporte para el manejo de estados asíncronos (<code>cargando</code>, <code>error</code>), gestión de permisos del navegador y rastreo de posición en tiempo real (<code>watchPosition</code>).</li>
-</ul>
-<h3 id="2-trazado-de-rutas-hu-23">2. Trazado de Rutas (HU-23)</h3>
-<ul>
-<li><strong>Integración de OSRM:</strong> La IA asistió en la creación de <code>rutaService.js</code> para consumir la API pública de <em>OpenStreetMap Routing Machine</em> (OSRM).</li>
-<li><strong>Decodificación de Polyline:</strong> Se delegó a la IA la escritura del algoritmo para decodificar las cadenas Polyline versión 5 que retorna OSRM, traduciéndolas a arrays de coordenadas inteligibles por <code>react-leaflet</code>.</li>
-</ul>
-<h3 id="3-fusion-de-ramas-resolucion-de-divergencias">3. Fusión de Ramas (Resolución de divergencias)</h3>
-<ul>
-<li>Se utilizó el agente para analizar las divergencias entre el entorno de desarrollo principal y una rama paralela (<code>ACA</code>) que contenía un <em>Dashboard de Administrador</em> y un componente de <em>Paginación</em>.</li>
-<li>La IA realizó un <code>diff --no-index</code> para leer los cambios, copiar los archivos selectivamente e inyectarlos de manera segura (<code>App.jsx</code>, <code>NavBar.jsx</code>) sin causar regresiones en el código de mapas.</li>
-</ul>
+<p>La Inteligencia Artificial se utilizó de manera responsable como una herramienta de apoyo, limitando su alcance a las siguientes áreas críticas:</p>
+<h3 id="1-consulta-y-uso-de-librerias">1. Consulta y Uso de Librerías</h3>
+<p>Se empleó la IA para acelerar el aprendizaje y la integración de librerías específicas del ecosistema, como <code>react-leaflet</code> para la implementación de mapas y geolocalización. La herramienta se utilizó para consultar documentación sobre cómo implementar componentes específicos (ej. <code>Polyline</code>, <code>MapContainer</code>) y gestionar eficientemente sus propiedades, aplicando las mejores prácticas recomendadas.</p>
+<h3 id="2-configuracion-y-levantamiento-de-la-ejecucion">2. Configuración y Levantamiento de la Ejecución</h3>
+<p>La IA fue consultada para entender y configurar el entorno de desarrollo de manera ágil. Nos apoyamos en ella para estandarizar los scripts de ejecución, revisar comandos de terminal (ej. dependencias de Node.js, configuraciones de Vite) y garantizar un despliegue local estable y fluido para todo el equipo.</p>
+<h3 id="3-identificacion-y-solucion-de-errores-debugging">3. Identificación y Solución de Errores (Debugging)</h3>
+<p><strong>Este fue el uso principal y más recurrente de la herramienta.</strong> Durante el desarrollo, la IA sirvió activamente para:
+- Analizar <em>stack traces</em> y registros de la consola para encontrar el origen de fallas complejas.
+- Solucionar errores de sintaxis o de compilación (como fallas al procesar archivos CSS con Tailwind o problemas de versiones incompatibles).
+- Detectar y corregir problemas de asincronía en React (hooks) y errores al interactuar con APIs externas (como el servicio OSRM).
+- Resolver conflictos técnicos durante la integración de ramas (merge) en Git.</p>
 <h2 id="supervision-humana-y-autoria">Supervisión Humana y Autoría</h2>
-<p>Aunque la IA generó fragmentos significativos de código funcional, el equipo de desarrollo (humanos) se encargó de:
-1. <strong>Diseño del requerimiento:</strong> Proveer rúbricas detalladas, criterios de aceptación y directrices de UI.
-2. <strong>Revisión Arquitectónica:</strong> Decidir <em>dónde</em> y <em>cómo</em> los componentes debían interactuar (ej. enlazar los botones del UI a las funciones del hook).
-3. <strong>Validación (Testing):</strong> Ejecutar pruebas manuales y aprobar los <em>Commits</em> paso a paso mediante revisiones atómicas, asegurando que la IA no rompiera implementaciones previas.</p>
-<p><strong>Conclusión:</strong> La IA sirvió como un copiloto de alto rendimiento, acelerando tareas algorítmicas repetitivas, pero el diseño estructural, la toma de decisiones y la responsabilidad del producto final residen exclusivamente en los autores del proyecto.</p>
+<p>Toda la concepción del producto, el diseño arquitectónico, las reglas de negocio y la aprobación final del código son de <strong>estricta autoría humana</strong>. La IA se limitó a un rol de soporte (similar a un consultor técnico interactivo) enfocado en destrabar errores de codificación y acelerar la investigación de librerías, recayendo la entera responsabilidad del sistema funcional sobre los autores del proyecto.</p>
 
 
 
