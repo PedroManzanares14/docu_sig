@@ -1,0 +1,38 @@
+site_name: Sportmatch Documentación
+site_description: Documentación técnica y de usuario para el proyecto Sportmatch (Gestión de Canchas)
+site_author: Grupo 01 - S02
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Inicio: index.md
+  - Manual de Usuario: usuario.md
+  - Documentación Técnica: tecnica.md
+  - Declaración de IA: declaracion_ia.md
