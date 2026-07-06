@@ -1,6 +1,7 @@
 site_name: Sportmatch Documentación
 site_description: Documentación técnica y de usuario para el proyecto Sportmatch (Gestión de Canchas)
 site_author: Grupo 01 - S02
+site_url: https://PedroManzanares14.github.io/docu_sig/
 
 theme:
   name: material
