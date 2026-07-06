@@ -476,6 +476,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#infraestructura-y-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Infraestructura y Despliegue
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -516,10 +527,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1-levantar-el-backend" class="md-nav__link">
+  <a href="#1-levantar-servicios-con-docker-keycloak-postgres" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Levantar el Backend
+        1. Levantar Servicios con Docker (Keycloak &amp; Postgres)
       
     </span>
   </a>
@@ -527,10 +538,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-levantar-el-frontend" class="md-nav__link">
+  <a href="#2-levantar-el-backend-spring-boot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Levantar el Frontend
+        2. Levantar el Backend (Spring Boot)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-levantar-el-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Levantar el Frontend
       
     </span>
   </a>
@@ -609,7 +631,11 @@
 <ul>
 <li><strong>Framework:</strong> Spring Boot (Java).</li>
 <li><strong>Base de Datos:</strong> PostgreSQL.</li>
-<li><strong>Seguridad:</strong> JWT (JSON Web Tokens) para autenticación y autorización (roles <code>USER</code> y <code>ADMIN</code>).</li>
+<li><strong>Seguridad y Gestión de Identidad:</strong> <strong>Keycloak</strong> como proveedor de identidad (IAM) para la gestión de usuarios, roles (<code>USER</code> y <code>ADMIN</code>) y emisión de tokens JWT.</li>
+</ul>
+<h3 id="infraestructura-y-despliegue">Infraestructura y Despliegue</h3>
+<ul>
+<li><strong>Contenedores:</strong> <strong>Docker</strong> y <strong>Docker Compose</strong> son utilizados para orquestar los servicios de base de datos (PostgreSQL) y el servidor de identidad (Keycloak) de manera ágil y reproducible.</li>
 </ul>
 <hr />
 <h2 id="estructura-del-frontend">Estructura del Frontend</h2>
@@ -630,15 +656,23 @@
 <ul>
 <li>Node.js (v18 o superior).</li>
 <li>Java 17+ y Maven (para el backend).</li>
-<li>PostgreSQL instalado y corriendo en el puerto 5432.</li>
+<li><strong>Docker</strong> y <strong>Docker Compose</strong> instalados (para levantar Keycloak y PostgreSQL).</li>
 </ul>
-<h3 id="1-levantar-el-backend">1. Levantar el Backend</h3>
+<h3 id="1-levantar-servicios-con-docker-keycloak-postgres">1. Levantar Servicios con Docker (Keycloak &amp; Postgres)</h3>
+<p>Antes de ejecutar el backend, debes levantar la infraestructura de datos y seguridad:
+1. Asegúrate de tener el demonio de Docker corriendo en tu sistema.
+2. Navega a la carpeta raíz del backend donde se encuentra el archivo <code>docker-compose.yml</code>.
+3. Ejecuta el comando para levantar los servicios en segundo plano:
+   <div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+4. <em>Nota:</em> Keycloak estará disponible (usualmente en el puerto 8080 u 8443) y PostgreSQL en el puerto 5432. Puedes acceder a la consola de Keycloak para importar el <em>Realm</em> del proyecto si es necesario.</p>
+<h3 id="2-levantar-el-backend-spring-boot">2. Levantar el Backend (Spring Boot)</h3>
 <ol>
-<li>Clona el repositorio <code>sportmatch-backend</code>.</li>
-<li>Actualiza el archivo <code>application.properties</code> con tus credenciales de PostgreSQL.</li>
+<li>Clona el repositorio <code>sportmatch-backend</code> (si no lo has hecho).</li>
+<li>Verifica que tu archivo <code>application.properties</code> (o <code>.yml</code>) apunte correctamente a los contenedores de Postgres y al servidor de Keycloak.</li>
 <li>Ejecuta el proyecto desde tu IDE (IntelliJ/Eclipse) o mediante terminal con <code>mvn spring-boot:run</code>.</li>
 </ol>
-<h3 id="2-levantar-el-frontend">2. Levantar el Frontend</h3>
+<h3 id="3-levantar-el-frontend">3. Levantar el Frontend</h3>
 <ol>
 <li>Entra a la carpeta del frontend <code>pnc-proyecto-final-frontend-ft-grupo-01-s02</code>.</li>
 <li>Instala las dependencias:
